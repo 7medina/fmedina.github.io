@@ -1,0 +1,882 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* INTERNET EXPLORER */
+@font-face{
+    font-family: 'Myriad';
+    src:url('Myriad.otf');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: 'Brush';
+    src:url('Brush.eot');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: 'Proxima';
+    src:url('proximanova-regular.eot');
+    font-weight:normal;
+    font-style:normal;
+}
+
+/* FIREFOX Y OTROS */
+@font-face{
+    font-family: 'Myriad';
+    src:url('Myriad.ttf');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: 'Brush';
+    src:url('Brush.ttf');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: 'Proxima';
+    src:url('proximanova-regular.ttf');
+    font-weight:normal;
+    font-style:normal;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background: #333333 url(../img/texture.png) center center;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Verlag A", "Verlag B", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+#containerMain{
+    width: 940px;
+    height: 622px;
+    margin: 15px auto; 
+    position: relative;  
+    overflow: hidden;
+}
+    #divAside{
+        width: 340px;
+        height: 100%;
+        float: left;
+        position: relative;
+    }
+        .divAsideWrap{
+            width: 100%;
+            height: 240px;
+            position: relative;
+            border-bottom: 1px solid #A3A3A3;
+        }
+            .divAsideWrap h1{
+                width: 100%;
+                height: 110px;
+                background: url(../img/logoConstructLin.png) no-repeat;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                font-weight: normal;
+            }
+                .divAsideWrap h1 a{
+                    text-decoration: none;
+                    color: #FFF;
+                    font-size: 53px;
+                    font-family: 'Brush';
+                    position: absolute;
+                    display: block;
+                    bottom: 26px;
+                    right: 12px;
+                }
+
+                .divAsideWrap h1 a:hover{
+                    color: #CCC;
+                }
+
+            .divAsideWrap header{
+               position: absolute;
+                width: 296px;
+                height: 143px;
+                top: 97px;
+                right: 0px;
+            }
+
+                .divAsideWrap header .photo{
+                    width: 150px;
+                    height: 143px;
+                    background: url(../img/me.png) no-repeat center center;
+                    position: relative;
+                    float: left;
+                }
+
+            .divAsideWrap header nav {
+                width: 146px;
+                height: 142px;
+                position: relative;
+                float: right;
+                
+            }
+
+                .divAsideWrap header ul{
+                    padding: 0px;
+                    margin: 0px;
+                    width: 130px;
+                    height: 120px;
+                    position: absolute;
+                    right: 0px;
+                    top: 11px;
+                    
+                }
+                    .divAsideWrap header li{
+                        width: 100%;
+                        position: relative;
+                        height: 40px;
+                        display: table;
+                    }
+                        .divAsideWrap header li a{
+                            width: 100%;
+                            height: 100%;
+                            display: table-cell;
+                            font-family: Proxima;
+                            font-size: 16px;
+                            vertical-align: middle;
+                            text-decoration: none;
+                            color: #D3D3D3; 
+                            text-align: center;                           
+                        }
+
+                        .divAsideWrap header li a.active{
+                            background: url(../img/nav-active.png) repeat; 
+                            color: rgb(51, 51, 51);                           
+                        }
+
+                        .portafolio_{
+                            width: 555px;
+                            height: 525px;
+                            position: relative;
+                            margin: 26px auto;
+                            margin-bottom: 0px;
+                        }
+
+                            .portafolio_ ._li{
+                                width: 265px;
+                                height: 150px;
+                                display: inline-block; 
+                                text-align: center;
+                                background:blue;
+                                margin-bottom: 20px;
+                                cursor: pointer;
+                                z-index: 2;
+                                position: relative;                               
+                            }
+
+                            .portafolio_ ._li div{
+                                position: absolute;
+                                bottom: 0px;
+                                width: auto;
+                                height: 30px;
+                                display: table;
+                                background: rgba(0,0,0,.8);
+                                padding-left: 10px;
+                                padding-right: 10px;
+                                font-family: "Proxima";
+                            }
+
+                            .portafolio_ ._li div span{
+                                width: 100%;
+                                height: 100%;
+                                color: white;
+                                display: table-cell;
+                                vertical-align: middle;
+                            }
+
+                            .portafolio_ ._li:nth-child(even){
+                                margin-left: 20px;
+                            }
+
+                            .portafolio_ img{
+                                -webkit-box-shadow: -1px 0px 5px 0px rgba(50, 50, 50, 0.75);
+                                -moz-box-shadow:    -1px 0px 5px 0px rgba(50, 50, 50, 0.75);
+                                box-shadow:         -1px 0px 5px 0px rgba(50, 50, 50, 0.75);
+                                -webkit-border-radius: 5px;
+                                -moz-border-radius: 5px;
+                                border-radius: 5px;
+                            }
+
+                            .background-alfa{
+                                text-align: center;
+                                position: fixed;
+                                z-index: 3;
+                                overflow: auto;
+                                width: 100%;
+                                height: 100%;
+                                top: 0px;
+                                text-align: center;
+                                display: none;
+                            }
+
+                                .background-alfa img{
+                                    width: 100%;
+                                    max-width: 1346px;
+
+                                }
+
+                                .close{
+                                    width: 33px;
+                                    height: 33px;
+                                    position: absolute;
+                                    top: 25px;
+                                    right: 15px;
+                                    cursor: pointer;
+                                    background: url(../img/closebtn.png) no-repeat center center;
+                                }
+
+                                .wrap-prew .close{
+                                    top: 15px;
+                                    background: url(../img/closebtn_.png) no-repeat center center;
+                                }
+
+                            .wrap-prew{
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                display: none;
+                            }
+
+                            .wrap-container-prew{
+                                width: 550px;
+                                height: 550px;
+                                margin: 65px auto;
+                                display: none;
+                            }
+
+                            #bullSwipe{
+                                min-width: 165px;
+                                height: 30px;
+                                position: relative;
+                                list-style: none;
+                                padding: 0px;
+                                margin: 0px auto;
+                                text-align: center;
+                            }
+
+                            #bullSwipe li{
+                                width: 15px;
+                                height: 15px;
+                                display: inline-block;
+                                cursor: pointer;
+                                background: url(../img/off.png) no-repeat;
+                            }
+
+                            #bullSwipe li.on{
+                                background: url(../img/on.png) no-repeat;
+                            }
+
+                            .wrapview{
+                                width: 350px;
+                                height: 410px;
+                                float: left;
+                                -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.77);
+                                -moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.77);
+                                box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.77);
+                            }
+                                .wrapview .loadImg{
+                                    width: 100%;
+                                    height: 100%;
+                                    background: url(../img/full.png) no-repeat center center;
+                                    display: none;
+                                    cursor: pointer;
+                                }
+
+                            .detail{
+                                width: 190px;
+                                height: 410px;
+                                float: right;
+                                font-family: "Proxima";
+                            }
+                                .detail h1{
+                                    margin: 0px;
+                                    padding:0px;
+                                    font-weight: normal;
+                                    
+                                }
+                                .detail span.minTex{
+                                    margin-bottom: 28px;
+                                    padding-bottom: 0px;
+                                    display: block;
+                                }
+                                .detail ul{
+                                    padding: 0px;
+                                    margin: 0px;
+                                    list-style: none;
+                                }
+
+                                .detail li {
+                                    min-width: 50px;
+                                    max-width: 150px;
+                                    height: 30px;
+                                    background: orange;
+                                    display: table;
+                                    margin-right: 10px;
+                                    padding-left: 10px;
+                                    padding-right: 10px;
+                                    margin-bottom: 10px;
+                                    float: left;
+                                    text-align: center;
+                                    background: #333;
+                                    -webkit-border-radius: 5px;
+                                    -moz-border-radius: 5px;
+                                    border-radius: 5px;
+                                }
+
+                                .detail li span{
+                                    display: table-cell;
+                                    vertical-align: middle;
+                                    color: white;
+                                }
+
+                            /* SWYPE */
+
+                            .swipe {
+                              overflow: hidden;
+                              visibility: hidden;
+                              position: relative;
+                            }
+                            .swipe-wrap {
+                              overflow: hidden;
+                              position: relative;
+                            }
+                            .swipe-wrap > div.slide-container {
+                              float:left;
+                              width:100%;
+                              position: relative;
+                            }
+
+                            /*/////*/
+
+        #PanelInformacionContacto {
+            width: 278px;
+            height: 372px;
+            float: left;
+            font-family: Proxima;
+            font-size: 17px;
+            color: #D3D3D3;
+            margin-left: 59px;
+            margin-top: 24px;
+        } 
+
+            .ContactoInformacion {
+                height: 29px;
+                text-align: left;
+                padding-left: 50px;
+                padding-top: 5px;
+                margin-top: 10px;
+            }  
+
+            .s-1, .s-2, .s-3, .s-4, .s-5{
+                background: url(../img/sprites.png) no-repeat;
+                position:absolute;
+                margin-left:-50px;
+                margin-top:-5px;
+                width: 34px;
+                height: 34px;
+            }
+
+            .s-1{
+                background-position: -1px 0;                
+            }
+
+            .s-2{
+                background-position: -1px -49px ;                
+            }
+
+            .s-3{
+                background-position: 0 -99px ;               
+            }
+
+            .s-4{
+                background-position: 0 -149px ;                
+            }
+
+            .s-5{
+                background-position: 0 -199px ;                
+            }
+
+            #PieCurriculum {
+                height: 77px;
+                margin-top: 40px;
+                text-align: center;
+            }
+
+            #DownCurriculum {
+                width: inherit;
+                height: 20px;
+                font-size: 12px;
+                text-align: center;
+                padding-top: 37px;
+                background-image: url(../img/okCV.png);
+                background-position: top;
+                background-repeat: no-repeat;
+            }
+
+            a.LinkPanelContacto {
+                text-decoration: none;
+                color: #D3D3D3;
+            }
+
+            a.LinkPanelContacto:hover {
+                color: #FEC413;
+            }
+
+            .loading {
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                left: 49%;
+                top: 45%;
+                border: solid 3px transparent;
+                border-top-color: #968F8F;
+                border-left-color: #000;
+                border-radius: 25px;
+                -webkit-animation: nprogress-spinner 400ms linear infinite;
+                -moz-animation:    nprogress-spinner 400ms linear infinite;
+                -ms-animation:     nprogress-spinner 400ms linear infinite;
+                -o-animation:      nprogress-spinner 400ms linear infinite;
+                animation:         nprogress-spinner 400ms linear infinite;
+            }
+
+            @-webkit-keyframes nprogress-spinner {
+              0%   { -webkit-transform: rotate(0deg);   transform: rotate(0deg); }
+              100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+            }
+            @-moz-keyframes nprogress-spinner {
+              0%   { -moz-transform: rotate(0deg);   transform: rotate(0deg); }
+              100% { -moz-transform: rotate(360deg); transform: rotate(360deg); }
+            }
+            @-o-keyframes nprogress-spinner {
+              0%   { -o-transform: rotate(0deg);   transform: rotate(0deg); }
+              100% { -o-transform: rotate(360deg); transform: rotate(360deg); }
+            }
+            @-ms-keyframes nprogress-spinner {
+              0%   { -ms-transform: rotate(0deg);   transform: rotate(0deg); }
+              100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
+            }
+            @keyframes nprogress-spinner {
+              0%   { transform: rotate(0deg);   transform: rotate(0deg); }
+              100% { transform: rotate(360deg); transform: rotate(360deg); }
+            }
+  
+    #divMain{
+        width: 600px;
+        height: 100%;
+        float: left;
+        position: relative;
+    }
+        .divMainWrap{
+            width: 100%;
+            height: 600px;
+            position: absolute;
+            bottom: 0px;
+            background: url(../img/bgLayout.png) repeat;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+
+        }
+
+/*////////////////////////////////////////////////////////////////////////////*/
+.Contenido{
+    width:530px;
+    height:530px;
+    margin:auto;
+    margin-top:35px;
+    background-image:url(../img/cohete.png);
+    background-repeat:no-repeat;
+    background-position: 410px 220px;
+    font-size: 12px;
+    font-family: "Proxima";  
+}
+ul.Normal {
+list-style: url(../img/list.png);
+padding-left: 15px;
+color: #666666;
+margin: 0px;
+}
+
+.TablaDetalleYo{
+    color:#666666;
+    margin-top:10px;
+}
+
+#MeDetalle{
+    width:405px;
+    margin-top:30px;
+    margin-left:30px;
+    color:#666666;
+    margin-bottom:30px;
+}
+
+#FormContacto input , #FormContacto textarea{
+    font-size:13px;
+    color:#666;
+}
+
+input.FormInput{
+    width:260px;
+    *width:294px;
+    height:32px;
+    border: medium none;
+    padding:0px;
+    padding-left:14px;
+    padding-right:20px;
+    color: rgb(61,61,61);
+    letter-spacing: -0.03;
+    text-shadow: 0pt 1px 0pt rgb(255,255,255);
+    background-image:url(../img/formImput.png);
+    font-size:14px;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    /*background-position:0px -32px;*/
+    
+}
+
+textarea.FormTextArea{  
+    width:260px;
+    *width:294px;
+    height:105px;
+    *height:133px;
+    border: medium none;
+    padding:0px;
+    padding-left:14px;
+    padding-right:20px;
+    padding-top:14px;
+    padding-bottom:14px;
+    color: rgb(61,61,61);
+    letter-spacing: -0.03;
+    text-shadow: 0pt 1px 0pt rgb(255,255,255);
+    background-image:url(../img/formTextArea.png);
+    font-size:14px;
+    background-color:transparent;
+    background-repeat:no-repeat;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    
+}
+
+#TablaFormulario{
+    width:294px;
+    height:288px;       
+}
+
+#ImgPortafolio{
+    width:452px;
+    height:476px;   
+    float:left;
+}
+
+#TextoPortafolio{
+    width:304px;
+    height:455px;
+    margin-top:10px;
+    float:right;
+    text-align:left;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+   
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

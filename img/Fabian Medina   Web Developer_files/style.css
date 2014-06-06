@@ -1,0 +1,422 @@
+/* Hoja de estilos del sitio 
+/* @autor: Fabian Medina */
+/* @Email: fabian.boxx@yahoo.com
+/* @date: 18/03/2012 */
+
+/*
+
+RESET
+
+*/
+article, aside, dialog, figure, footer, header, hgroup, nav, section { display: block; }
+body, form, ol, ul, dl, li, dt, dd, td, th ,tr, h1, h2, h3, h4, h5, h6, p, pre, blockquote, address { margin: 0; padding: 0; }
+ol, ul { list-style: none; }
+img { border: 0; }
+fieldset { margin: 0; padding: 0; border: 0; }
+input, select, textarea { font-size: 100%; vertical-align: middle; }
+table { border-collapse: collapse; border-spacing: 0; empty-cells: show; }
+th { text-align: left; }
+a:focus { overflow: hidden; }
+
+body{
+	background-color:#333333;
+	background-image:url(../img/bg.png);
+	background-repeat:repeat-x;
+	text-align:center;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:12px;
+}
+
+/* INTERNET EXPLORER */
+@font-face{
+	font-family: 'Myriad';
+	src:url('Myriad.otf');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face{
+	font-family: 'Brush';
+	src:url('Brush.eot');
+	font-weight:normal;
+	font-style:normal;
+}
+
+/* FIREFOX Y OTROS */
+@font-face{
+	font-family: 'Myriad';
+	src:url('Myriad.ttf');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face{
+	font-family: 'Brush';
+	src:url('Brush.ttf');
+	font-weight:normal;
+	font-style:normal;
+}
+
+#ContenedorPrincipal{
+	width:898px;
+	height:600px;
+	margin:auto;
+	margin-top:110px;
+	text-align:left;
+}
+
+#Logo{
+	background-image:url(../img/logoConstructLin.png);
+	width:281px;
+	height:96px;
+	background-repeat:no-repeat;	
+	padding-top:13px;
+	padding-left:60px;
+	margin-left:-43px;
+	margin-top:-21px;
+	float:left;
+}
+
+a.LogoLink{
+	text-decoration:none;
+	color:#FFF;
+	font-size:53px;
+	font-family: 'Brush';
+}
+a.LogoLink:hover{
+	color:#CCC;
+}
+
+
+#Cuerpo{
+	width:600px;
+	height:600px;
+	background-image:url(../img/bgLayout.png);
+	background-repeat:no-repeat;
+	float:right;
+}
+
+#FotoNavegacion{
+	width:285px;
+	height:133px;
+	float:left;
+	margin-left:13px;
+	margin-top:-20px;
+}
+
+#Foto{
+	width:133px;
+	height:133px;
+	float:left;
+	background-image:url(../img/foto.png);
+	margin-left:4px;
+}
+
+#Nav{
+	width:130px;
+	height:133px;
+	float:right;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:16px;
+	
+}
+
+ul.Normal {
+	list-style:url(../img/list.png);
+	padding-left:15px;
+	color:#666666;
+}
+	
+
+ul.ListaNav{
+	margin:0px;
+	padding:0px;
+}
+
+ul.ListaNav li{
+	float:left;
+	margin:0px;
+	padding:0px;
+}
+
+ul.ListaNav li a{
+	width:106px;
+	/**width:144px;*/
+	height:33px;
+	/**height:43px;*/
+	text-decoration:none;
+	display:block;
+	margin-top:1px;
+	padding-left:24px;
+	padding-top:10px;
+	color:#D3D3D3;	
+}
+
+.Ulhover{
+	background-image:url(../img/nav-active.png);
+}
+
+.Clear{
+	clear:both;
+}
+
+#DivisionLin{
+	width:326px;
+	height:1px;
+	background-image:url(../img/DivisionLin.png);
+	float:left;
+	margin-left:-30px;
+	margin-top:15px;
+}
+
+#PanelInformacionContacto{
+	width:278px;
+	height:372px;
+	float:left;
+	margin-top:25px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 17px;
+	color:#D3D3D3;
+	margin-left:20px;
+}
+
+.s-1, .s-2, .s-3, .s-4, .s-5{
+	background: url(../img/sprites.png) no-repeat;
+	position:absolute;
+	margin-left:-50px;
+	margin-top:-5px;
+}
+
+.s-1{
+	background-position: -1px 0;
+	width: 34px;
+	height: 34px;
+}
+
+.s-2{
+	background-position: -1px -49px ;
+	width: 34px;
+	height: 34px;
+}
+
+.s-3{
+	background-position: 0 -99px ;
+	width: 34px;
+	height: 34px;
+}
+
+.s-4{
+	background-position: 0 -149px ;
+	width: 34px;
+	height: 34px;
+}
+
+.s-5{
+	background-position: 0 -199px ;
+	width: 34px;
+	height: 34px;
+}
+
+.ContactoInformacion{
+	height:29px;
+	*height:34px;
+	text-align:left;
+	padding-left:50px;	
+	padding-top:5px;
+	margin-top:10px;
+}
+
+a.LinkPanelContacto{
+	text-decoration:none;
+	color:#D3D3D3;
+}
+
+a.LinkPanelContacto:hover{
+	color:#FEC413;
+}
+	
+#DownCurriculum{
+	width:inherit;
+	height:20px;   
+	font-size:12px;
+	text-align:center;
+	padding-top:37px;
+	background-image:url(../img/okCV.png);
+	background-position:top;
+	background-repeat:no-repeat;
+}
+
+#Pie{
+	font-size:14px;
+	text-align:center;
+}
+
+#PieCurriculum{
+	height:77px;
+	margin-top:40px;
+	*margin-top:-5px;
+	text-align:center;	
+}
+
+.Contenido{
+	width:530px;
+	height:530px;
+	margin:auto;
+	margin-top:35px;
+	background-image:url(../img/cohete.png);
+	background-repeat:no-repeat;
+	background-position: 410px 220px;;	
+}
+
+.TablaDetalleYo{
+	color:#666666;
+	margin-top:10px;
+}
+
+#MeDetalle{
+	width:410px;
+	margin-top:30px;
+	margin-left:30px;
+	color:#666666;
+	margin-bottom:30px;
+}
+
+#FormContacto input , #FormContacto textarea{
+	font-size:13px;
+	color:#666;
+}
+
+input.FormInput{
+	width:260px;
+	*width:294px;
+	height:32px;
+	border: medium none;
+	padding:0px;
+	padding-left:14px;
+	padding-right:20px;
+	color: rgb(61,61,61);
+	letter-spacing: -0.03;
+	text-shadow: 0pt 1px 0pt rgb(255,255,255);
+	background-image:url(../img/formImput.png);
+	font-size:14px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	/*background-position:0px -32px;*/
+	
+}
+
+textarea.FormTextArea{	
+	width:260px;
+	*width:294px;
+	height:105px;
+	*height:133px;
+	border: medium none;
+	padding:0px;
+	padding-left:14px;
+	padding-right:20px;
+	padding-top:14px;
+	padding-bottom:14px;
+	color: rgb(61,61,61);
+	letter-spacing: -0.03;
+	text-shadow: 0pt 1px 0pt rgb(255,255,255);
+	background-image:url(../img/formTextArea.png);
+	font-size:14px;
+	background-color:transparent;
+	background-repeat:no-repeat;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	
+}
+
+#TablaFormulario{
+	width:294px;
+	height:288px;		
+}
+
+#ImgPortafolio{
+	width:452px;
+	height:476px;	
+	float:left;
+}
+
+#TextoPortafolio{
+	width:304px;
+	height:455px;
+	margin-top:10px;
+	float:right;
+	text-align:left;
+}
+
+div.Fullmistersoccer{
+	background-image:url(../img/siteFull1.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+div.FullIglesia{
+	background-image:url(../img/siteFull2.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+div.FullEjercito{
+	background-image:url(../img/siteFull3.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+div.FullComifah{
+	background-image:url(../img/siteFull4.png);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+div.FullLeoplast{
+	background-image:url(../img/siteFull5.png);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+div.FullCurriculum{
+	background-image:url(../img/siteFull6.png);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+.TituloTextoPortafolio{
+	font-size:18px;
+	line-height:25px;
+}
+
+.DetalleTextoPortafolio{
+	font-size:13px;
+	color:#333333;
+}	
+
+div.Tags{
+	width:84px;
+	height:23px;
+	*height:30px;
+	background-image:url(../img/tags_img.png);
+	color:#FFFFFF;
+	font-size:11px;
+	float:left;
+	text-align:center;
+	margin-top:10px;
+	padding-top:7px;
+	font-weight:bold;
+}
+
+#Espacio{
+	width:10px;
+	height:30px;
+	float:left;
+}
+
+.Clear{
+	clear:both;
+}
+
+.Display{
+	display:none;
+}
+	
+	

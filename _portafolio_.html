@@ -1,0 +1,574 @@
+<script type="text/javascript">
+$("#txtNombre").focus(function(e) {
+    if ( document.getElementById("txtNombre").value.length < 1 || document.getElementById("txtNombre").value == 'Tu nombre'){
+        document.getElementById("txtNombre").value = '';
+    }
+});
+$("#txtNombre").focusout(function(e) {
+    if( document.getElementById("txtNombre").value == ''){
+        document.getElementById("txtNombre").value = 'Tu nombre'
+    }
+});
+$("#txtMail").focus(function(e) {
+    if ( document.getElementById("txtMail").value.length < 1 || document.getElementById("txtMail").value == 'Tu email, para poder contestarte'){
+        document.getElementById("txtMail").value = '';
+    }
+});
+$("#txtMail").focusout(function(e) {
+    if( document.getElementById("txtMail").value == ''){
+        document.getElementById("txtMail").value = 'Tu email, para poder contestarte'
+    }
+});
+$("#txtMensaje").focus(function(e) {
+        if ( document.getElementById("txtMensaje").value.length < 1 || document.getElementById("txtMensaje").value == 'Tu mensaje, pregunta lo que necesites :)'){
+        document.getElementById("txtMensaje").value = '';
+    }
+});
+$("#txtMensaje").focusout(function(e) {
+    if( document.getElementById("txtMensaje").value == ''){
+        document.getElementById("txtMensaje").value = 'Tu mensaje, pregunta lo que necesites :)'
+    }
+});
+
+$("#FormContacto").submit(function() {  
+      //Validar que no esta el etxto predeterminado
+      if (document.getElementById('txtNombre').value == "Tu nombre" || document.getElementById('txtNombre').value == ''  || document.getElementById('txtNombre').value.length < 3){       
+          $('#txtNombre').css('background-position', '0px -32px');
+          $('#txtNombre').css('color','#000');
+          Errores = true;
+      }
+      else{
+          $('#txtNombre').css('background-position', '0px 0px');
+          $('#txtNombre').css('color','#666');
+      }
+        
+      if (document.getElementById('txtMail').value == "Tu email, para poder contestarte" || document.getElementById('txtMail').value == ''){
+          $('#txtMail').css('background-position', '0px -32px');
+          $('#txtMail').css('color','#000');
+          Errores = true;
+      }  
+      else{
+           $('#txtMail').css('background-position', '0px 0px');
+          $('#txtMail').css('color','#666');
+      }
+      
+      if (document.getElementById('txtMensaje').value == "Tu mensaje, pregunta lo que necesites :)" || document.getElementById('txtMensaje').value == '' || document.getElementById('txtMensaje').value.length < 5){
+          $('#txtMensaje').css('background-position', '0px -133px');
+          $('#txtMensaje').css('color','#000');
+          Errores = true;
+      }
+      else{
+          $('#txtMensaje').css('background-position', '0px 0px');
+          $('#txtMensaje').css('color','#666');
+      }
+      //Validar el formato y que no eeste vacio de correo electronico
+      var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+      var Errores = false;
+          if (!(emailReg.test(document.getElementById('txtMail').value))){
+               $('#txtMail').css('background-position', '0px -32px');
+               $('#txtMail').css('color','#000');
+               Errores = true;
+          }
+          else{
+              $('#txtMail').css('background-position', '0px 0px');
+              $('#txtMail').css('color','#666');
+          }     
+      if (Errores){
+          return false;
+      }
+      else{
+          return true;
+      }      
+});
+
+</script>
+<div class="wrap-prew">
+	<div class="close"></div>
+	<div class="wrap-container-prew" atr-num="1">
+		<div class="wrapview" style="background: url(img/logos/tvc_.png);">
+			<div class="loadImg" atr-full="img/logos/tvcfull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">Corparación Televicentro</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Expression engine</span>			
+			<span class="minTex">Visitar <img src="img/external_link_icon.png"7></span>
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>
+				<li><span>CMS</span></li>
+				<li><span>Expression Engine</span></li>				
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="2">
+		<div class="wrapview" style="background: url(img/logos/asp_.png);">
+			<div class="loadImg" atr-full="img/logos/aspfull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">Asp Consultores</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Expression engine</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>
+				<li><span>CMS</span></li>
+				<li><span>Expression Engine</span></li>				
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="3">
+		<div class="wrapview" style="background: url(img/logos/axcess_.png);">
+			<div class="loadImg" atr-full="img/logos/axcessfull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">Axcess Music</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Expression engine</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>
+				<li><span>CMS</span></li>
+				<li><span>Expression Engine</span></li>				
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="4">
+		<div class="wrapview" style="background: url(img/logos/azunosa2_.png);">
+			<div class="loadImg" atr-full="img/logos/azunosa2full.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">Cervecería Hondureña</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Expression engine</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>
+				<li><span>CMS</span></li>
+				<li><span>Expression Engine</span></li>				
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="5">
+		<div class="wrapview" style="background: url(img/logos/cerveceria_.png);">
+			<div class="loadImg" atr-full="img/logos/cerveceriafull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">Cervecería Hondureña</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Expression engine</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>
+				<li><span>CMS</span></li>
+				<li><span>Expression Engine</span></li>				
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="6">
+		<div class="wrapview" style="background: url(img/logos/comuica_.png);">
+			<div class="loadImg" atr-full="img/logos/comuicafull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">Comunica</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Expression engine</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>
+				<li><span>CMS</span></li>
+				<li><span>Expression Engine</span></li>				
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="7">
+		<div class="wrapview" style="background: url(img/logos/destinos_exito_.png);">
+			<div class="loadImg" atr-full="img/logos/destinos_exitofull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">Destinos de Éxito</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Expression engine</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>
+				<li><span>CMS</span></li>
+				<li><span>Expression Engine</span></li>				
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="8">
+		<div class="wrapview" style="background: url(img/logos/discovery_.png);">
+			<div class="loadImg" atr-full="img/logos/discoveryfull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">Discovery School</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Expression engine</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>
+				<li><span>CMS</span></li>
+				<li><span>Expression Engine</span></li>				
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="9">
+		<div class="wrapview" style="background: url(img/logos/farmacias_.png);">
+			<div class="loadImg" atr-full="img/logos/farmaciasfull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">Farmacias del Ahorro</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Expression engine</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>
+				<li><span>CMS</span></li>
+				<li><span>Expression Engine</span></li>				
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="10">
+		<div class="wrapview" style="background: url(img/logos/ganagol_.png);">
+			<div class="loadImg" atr-full="img/logos/ganagolfull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">Lotelhsa</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Expression engine</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>
+				<li><span>CMS</span></li>
+				<li><span>Expression Engine</span></li>				
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="11">
+		<div class="wrapview" style="background: url(img/logos/handal_.png);">
+			<div class="loadImg" atr-full="img/logos/handalfull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">Químicas Handal</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Expression engine</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>
+				<li><span>CMS</span></li>
+				<li><span>Expression Engine</span></li>				
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="12">
+		<div class="wrapview" style="background: url(img/logos/henry_morgan_.png);">
+			<div class="loadImg" atr-full="img/logos/henry_morganfull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">HM Resorts</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Expression engine</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>
+				<li><span>CMS</span></li>
+				<li><span>Expression Engine</span></li>				
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="13">
+		<div class="wrapview" style="background: url(img/logos/laboratoriosmedicos_.png);">
+			<div class="loadImg" atr-full="img/logos/laboratoriosmedicosfull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">Laboratorios Médicos</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Expression engine</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>
+				<li><span>CMS</span></li>
+				<li><span>Expression Engine</span></li>				
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="14">
+		<div class="wrapview" style="background: url(img/logos/medialuna_.png);">
+			<div class="loadImg" atr-full="img/logos/medialunafull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">HM Resorts</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Expression engine</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>
+				<li><span>CMS</span></li>
+				<li><span>Expression Engine</span></li>				
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="15">
+		<div class="wrapview" style="background: url(img/logos/multisas_.png);">
+			<div class="loadImg" atr-full="img/logos/multisasfull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">Multisas</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Expression engine</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>
+				<li><span>CMS</span></li>
+				<li><span>Expression Engine</span></li>				
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="16">
+		<div class="wrapview" style="background: url(img/logos/premier_.png);">
+			<div class="loadImg" atr-full="img/logos/premierfull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">Premier Aviation</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Expression engine</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>
+				<li><span>CMS</span></li>
+				<li><span>Expression Engine</span></li>				
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="17">
+		<div class="wrapview" style="background: url(img/logos/publicitas_.png);">
+			<div class="loadImg" atr-full="img/logos/publicitasfull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">Publicitas</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Expression engine</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>
+				<li><span>CMS</span></li>
+				<li><span>Expression Engine</span></li>				
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="18">
+		<div class="wrapview" style="background: url(img/logos/vmware_.png);">
+			<div class="loadImg" atr-full="img/logos/vmwarefull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">VMware</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Ninguna</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>			
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="19">
+		<div class="wrapview" style="background: url(img/logos/vmwarec_.png);">
+			<div class="loadImg" atr-full="img/logos/vmwarecfull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">VMware</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Ninguna</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>			
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="20">
+		<div class="wrapview" style="background: url(img/logos/cerveceria_fundacion_.png);">
+			<div class="loadImg" atr-full="img/logos/cerveceria_fundacionfull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">Cervecería Hondureña</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Expression engine</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>
+				<li><span>CMS</span></li>
+				<li><span>Expression Engine</span></li>				
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="21">
+		<div class="wrapview" style="background: url(img/logos/superpremio_.png);">
+			<div class="loadImg" atr-full="img/logos/superpremiofull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">Lotelhsa</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Expression engine</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>
+				<li><span>CMS</span></li>
+				<li><span>Expression Engine</span></li>				
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap-container-prew" atr-num="22">
+		<div class="wrapview" style="background: url(img/logos/zuniga_.png);">
+			<div class="loadImg" atr-full="img/logos/zunigafull.jpg"></div>
+		</div>
+		<div class="detail">
+			<h1>Cliente</h1>
+			<span class="minTex">Zúniga y López</span>
+			<h1>Plataforma</h1>
+			<span class="minTex">Ninguna</span>			
+			<ul>
+				<li><span>HTML5</span></li>
+				<li><span>CSS3</span></li>
+				<li><span>jQuery</span></li>			
+				<li><span>PHP</span></li>
+				<li><span>MYSQL</span></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id='slider' class='swipe portafolio_'>
+
+  <div class='swipe-wrap'>
+
+    <div class="slide-container">
+	    <div class="_li" style="background: url(img/logos/tvc.png)" atr-num="1"><div><span>Corporacion Televicentro</span></div></div>
+	    <div class="_li" style="background: url(img/logos/cerveceria.png)" atr-num="5"><div><span>Cervecería Hondureña</span></div></div>
+	    <div class="_li" style="background: url(img/logos/superpremio.png)" atr-num="21"><div><span>Lotelhsa</span></div></div>
+	    <div class="_li" style="background: url(img/logos/premier.png)" atr-num="16"><div><span>Premier Aviation</span></div></div>
+	    
+	    <div class="_li" style="background: url(img/logos/vmware.png)" atr-num="18"><div><span>VMware</span></div></div>
+	    <div class="_li" style="background: url(img/logos/discovery.png)" atr-num="8"><div><span>Discovery School</span></div></div>
+	    
+	</div>
+
+	<div class="slide-container">
+	    <div class="_li" style="background: url(img/logos/destinos_exito.png)" atr-num="7"><div><span>Destinos de Éxito</span></div></div>
+	    <div class="_li" style="background: url(img/logos/comuica.png)" atr-num="6"><div><span>Comunica</span></div></div>
+	    <div class="_li" style="background: url(img/logos/farmacias.png)" atr-num="9"><div><span>Farmacias del Ahorro</span></div></div>
+	    <div class="_li" style="background: url(img/logos/ganagol.png)" atr-num="10"><div><span>Lotelhsa</span></div></div>
+	    <div class="_li" style="background: url(img/logos/handal.png)" atr-num="11"><div><span>Químicas Handal</span></div></div>
+	    <div class="_li" style="background: url(img/logos/henry_morgan.png)" atr-num="12"><div><span>HM Resorts</span></div></div>
+	</div>
+
+	<div class="slide-container">
+	    <div class="_li" style="background: url(img/logos/laboratoriosmedicos.png)" atr-num="13"><div><span>Laboratorios Médicos</span></div></div>
+	    <div class="_li" style="background: url(img/logos/medialuna.png)" atr-num="14"><div><span>HM Resorts</span></div></div>
+	    <div class="_li" style="background: url(img/logos/multisas.png)" atr-num="15"><div><span>Multisas</span></div></div>
+	    <div class="_li" style="background: url(img/logos/azunosa2.png)" atr-num="4"><div><span>Cervecería Hondureña</span></div></div>
+	    <div class="_li" style="background: url(img/logos/publicitas.png)" atr-num="17"><div><span>Publicitas</span></div></div>
+	    <div class="_li" style="background: url(img/logos/asp.png)" atr-num="2"><div><span>Asp Consultores</span></div></div>
+	    
+	</div>
+
+	<div class="slide-container">
+	    <div class="_li" style="background: url(img/logos/vmwarec.png)" atr-num="19"><div><span>VMware</span></div></div>
+	    <div class="_li" style="background: url(img/logos/cerveceria_fundacion.png)" atr-num="20"><div><span>Cervecería Hondureña</span></div></div>
+	    <div class="_li" style="background: url(img/logos/axcess.png)" atr-num="3"><div><span>Axcess Music</span></div></div>
+	    <div class="_li" style="background: url(img/logos/zuniga.png)" atr-num="22"><div><span>Zúniga y López</span></div></div>
+	</div>
+
+  </div>
+</div>
+<ul id="bullSwipe">
+		<li onclick="mySwipe.slide(0,200)" class="on"></li>
+		<li onclick="mySwipe.slide(1,200)"></li>
+		<li onclick="mySwipe.slide(2,200)"></li>
+		<li onclick="mySwipe.slide(3,200)"></li>
+	</ul>
+<script>
+window.mySwipe = Swipe(document.getElementById('slider'));
+</script>
